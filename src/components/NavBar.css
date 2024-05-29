@@ -1,0 +1,56 @@
+.NavBar {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.Navitem a::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #4caf50;
+  transition: width 0.3s ease;
+}
+.Navitem a {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  text-decoration: none;
+  color: #840f0f;
+  padding: 10px;
+  display: inline-block;
+  position: relative;
+  transition: color 0.3s ease;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+}
+.Navitem a:hover {
+  color: #4caf50;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.Navitem {
+  margin: 0 15px;
+  position: relative;
+  transition: color 0.3s ease;
+  cursor: pointer;
+  user-select: none;
+}
+.Navitem a:hover::after {
+  width: 100%;
+}
