@@ -5,7 +5,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
-import Typewriter from "./components/Typewriter";
+import Typewriter from "./components/Typing";
 function App() {
   return (
     <Router>
@@ -18,11 +18,6 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/typewriter" element={<Typewriter />} />
         </Routes>
-        <Typewriter
-          text={"Welcome to my website! I am a web developer."}
-          typeSpeed={40}
-          deleteSpeed={30}
-        />
       </div>
     </Router>
   );

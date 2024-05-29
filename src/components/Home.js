@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Typewriter from "./Typing";
 
 const HomeContainer = styled.div`
   text-align: center;
@@ -70,9 +71,22 @@ const Home = () => {
         alt="background"
         style={{ width: "100%", height: "auto" }}
       />
-      <Header>Hello World!</Header>
-      <SubHeader>I am</SubHeader>
-      <SubHeader>founder | Software Engineer | Data Scientist</SubHeader>
+      <Typewriter
+        text={["Hello there!", "Welcome to my website!"]}
+        typeSpeed={100}
+        deleteSpeed={50}
+        duration={1000}
+      />
+      <Typewriter
+        text={[
+          "I am Sarthak Pandey,",
+          "I am a developer and a designer. I have experience in HTML, CSS, and JavaScript.",
+        ]}
+        typeSpeed={100}
+        deleteSpeed={50}
+        duration={1000}
+      />
+
       <ButtonContainer>
         <Button>More About Me</Button>
         <Button>Education</Button>
