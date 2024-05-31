@@ -65,9 +65,25 @@ const Button = styled.button`
   }
 `;
 
+// ... other code
+
 const Home = () => {
   return (
     <HomeContainer>
+      <ul className="NavBar">
+        <li className="Navitem">
+          <Link to="/">Home</Link>
+        </li>
+        <li className="Navitem">
+          <Link to="/about">About</Link>
+        </li>
+        <li className="Navitem">
+          <Link to="/projects">Projects</Link>
+        </li>
+        <li className="Navitem">
+          <Link to="/contact">Contact</Link>
+        </li>
+      </ul>
       <Header>Sarthak Pandey</Header>
       <img
         src="https://cdn.medicalfuturist.com/wp-content/uploads/2016/09/original.jpg"
@@ -88,12 +104,13 @@ const Home = () => {
         deleteSpeed={50}
         duration={1000}
       />
+
       <Tile
         header="Sarthak Pandey"
         subheader="About Me"
-        img="https://cdn.medicalfuturist.com/wp-content/uploads/2016/09/original.jpg"
+        img=" man working on laptop"
         text="I am a developer and a designer. I have experience in HTML, CSS, and JavaScript."
-        link="https://www.google.com"
+        link="https://cdn.dribbble.com/users/3484830/screenshots/16787618/media/b134e73ef667b926c76d8ce3f962dba2.gif"
         linkText="More About Me"
       />
       <ButtonContainer>
