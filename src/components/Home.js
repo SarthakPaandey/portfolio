@@ -66,6 +66,7 @@ const Button = styled.button`
 const Home = () => {
   return (
     <HomeContainer>
+      <Header>Sarthak Pandey</Header>
       <img
         src="https://cdn.medicalfuturist.com/wp-content/uploads/2016/09/original.jpg"
         alt="background"
@@ -79,7 +80,6 @@ const Home = () => {
       />
       <Typewriter
         text={[
-          "I am Sarthak Pandey,",
           "I am a developer and a designer. I have experience in HTML, CSS, and JavaScript.",
         ]}
         typeSpeed={100}
