@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import Typewriter from "./Typing";
+import { Link } from "react-router-dom";
+import Tile from "./Tile";
 
 const HomeContainer = styled.div`
   text-align: center;
@@ -86,7 +88,14 @@ const Home = () => {
         deleteSpeed={50}
         duration={1000}
       />
-
+      <Tile
+        header="Sarthak Pandey"
+        subheader="About Me"
+        img="https://cdn.medicalfuturist.com/wp-content/uploads/2016/09/original.jpg"
+        text="I am a developer and a designer. I have experience in HTML, CSS, and JavaScript."
+        link="https://www.google.com"
+        linkText="More About Me"
+      />
       <ButtonContainer>
         <Button>More About Me</Button>
         <Button>Education</Button>

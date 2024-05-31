@@ -6,6 +6,8 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Typewriter from "./components/Typing";
+import Tile from "./components/Tile";
+
 function App() {
   return (
     <Router>
@@ -17,6 +19,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/typewriter" element={<Typewriter />} />
+          <Route path="/tile" element={<Tile />} />
         </Routes>
       </div>
     </Router>

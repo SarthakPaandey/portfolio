@@ -1,0 +1,28 @@
+.tile {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.tile h2 {
+  color: #333;
+}
+
+.tile h3 {
+  color: #666;
+}
+
+.tile img {
+  max-width: 100%;
+  height: auto;
+}
+
+.tile .text {
+  margin-top: 10px;
+}
+
+.tile .link {
+  color: #007bff;
+  text-decoration: none;
+}
