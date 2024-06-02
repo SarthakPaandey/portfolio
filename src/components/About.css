@@ -1,0 +1,119 @@
+/* About.css */
+
+section {
+  padding: 2rem;
+  text-align: center;
+  background-image: url("https://img.freepik.com/free-photo/glowing-spaceship-orbits-planet-starry-galaxy-generated-by-ai_188544-9655.jpg?t=st=1717324041~exp=1717327641~hmac=0a72e15677c97e8f0727700b9a21cd4886051b772619c54b8c5116f23bfeb934&w=2000");
+  background-size: automatic;
+  background-position: center;
+  background-repeat: space;
+}
+h1 {
+  color: #5e3c96;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+image {
+  max-width: 100%;
+  height: auto;
+  margin: 2rem auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+image:hover {
+  opacity: 0.8;
+  border: 2px solid #5e3c96;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #e6e5e8;
+}
+h1 {
+  color: #5e3c96;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: "Georgia", serif;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-family: "Arial", sans-serif;
+}
+
+image {
+  max-width: 100%;
+  height: auto;
+  margin: 2rem auto;
+  border-radius: 5px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}
+button {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  background: #5e3c96;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #472b72;
+}
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  button {
+    font-size: 0.8rem;
+  }
+}

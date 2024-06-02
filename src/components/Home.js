@@ -2,18 +2,28 @@ import React from "react";
 import styled from "styled-components";
 import Typewriter from "./Typing";
 import { Link } from "react-router-dom";
+import NavBar from "./NavBar";
 import Tile from "./Tile";
+import { useSpring, animated } from "react-spring";
 
 const HomeContainer = styled.div`
   text-align: center;
   padding: 2rem;
-  background-color: #fff;
+  display: flex; /* Add flexbox display */
+  flex-direction: column; /* Arrange items in a row */
+  align-items: center; /* Vertically align items */
+  justify-content: space-around;
+  background: url(https://img.freepik.com/free-photo/space-travel-collage-design_23-2150163773.jpg?t=st=1717343884~exp=1717347484~hmac=654c66ef6878cc3feb7b595941842d3c554d5ea5de4c15b4bc1dc9ae3771900f&w=2000);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
 `;
 
 const Header = styled.h1`
   font-size: 3rem;
   color: #5e3c96;
   margin-top: 2rem;
+  margin-bottom: 1rem;
 `;
 
 const SubHeader = styled.h2`
@@ -23,7 +33,11 @@ const SubHeader = styled.h2`
 `;
 
 const ButtonContainer = styled.div`
-  margin-top: 2rem;
+  margin-top: 2rem;https://img.freepik.com/free-photo/space-travel-collage-design_23-2150163773.jpg?t=st=1717343884~exp=1717347484~hmac=654c66ef6878cc3feb7b595941842d3c554d5ea5de4c15b4bc1dc9ae3771900f&w=2000
+  display: flex; /* Add flexbox display */
+  flex-direction: column; /* Arrange items in a column */
+  /* Center items horizontally */
+  gap: 2rem; /* Add some spacing between buttons */
 `;
 
 const Button = styled.button`
@@ -56,6 +70,24 @@ const Button = styled.button`
       background-color: #7e57c2;
     }
   }
+  /* ButtonContainer.css */
+
+  .ButtonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .Button {
+    /* ... other styles ... */
+  }
+
+  .Button img {
+    max-width: 100px;
+    height: auto;
+    margin-right: 1rem;
+  }
 
   &:nth-child(4) {
     background-color: #b39ddb;
@@ -64,60 +96,57 @@ const Button = styled.button`
     }
   }
 `;
-
-// ... other code
-
 const Home = () => {
+  const headerAnimation = useSpring({
+    from: { transform: "scale(1)" },
+    to: { transform: "scale(2)" },
+    config: { duration: 1000, yoyo: true },
+  });
+
+  const subHeaderAnimation = useSpring({
+    from: { transform: "translateY(30px)" },
+    to: { transform: "translateY(0px)" },
+    config: { duration: 1000, yoyo: true },
+  });
+
+  const buttonAnimation = useSpring({
+    from: { transform: "scale(1)" },
+    to: { transform: "scale(1.1)" },
+    config: { duration: 1000, yoyo: true },
+  });
+
   return (
     <HomeContainer>
-      <ul className="NavBar">
-        <li className="Navitem">
-          <Link to="/">Home</Link>
-        </li>
-        <li className="Navitem">
-          <Link to="/about">About</Link>
-        </li>
-        <li className="Navitem">
-          <Link to="/projects">Projects</Link>
-        </li>
-        <li className="Navitem">
-          <Link to="/contact">Contact</Link>
-        </li>
-      </ul>
-      <Header>Sarthak Pandey</Header>
-      <img
-        src="https://cdn.medicalfuturist.com/wp-content/uploads/2016/09/original.jpg"
-        alt="background"
-        style={{ width: "100%", height: "auto" }}
-      />
-      <Typewriter
-        text={["Hello there!", "Welcome to my website!"]}
-        typeSpeed={100}
-        deleteSpeed={50}
-        duration={1000}
-      />
+      <animated.h1 style={headerAnimation}>Sarthak Pandey</animated.h1>
+
       <Typewriter
         text={[
-          "I am a developer and a designer. I have experience in HTML, CSS, and JavaScript.",
+          "Hello there! 👋",
+          "😊 Welcome to my website!",
+          "I am a developer😄  and a designer🤔.",
         ]}
         typeSpeed={100}
         deleteSpeed={50}
         duration={1000}
       />
 
-      <Tile
-        header="Sarthak Pandey"
-        subheader="About Me"
-        img=" man working on laptop"
-        text="I am a developer and a designer. I have experience in HTML, CSS, and JavaScript."
-        link="https://cdn.dribbble.com/users/3484830/screenshots/16787618/media/b134e73ef667b926c76d8ce3f962dba2.gif"
-        linkText="More About Me"
-      />
+      <animated.h2 style={subHeaderAnimation}>
+        Full Stack Developer & Designer
+      </animated.h2>
+
       <ButtonContainer>
-        <Button>More About Me</Button>
-        <Button>Education</Button>
-        <Button>Work Experience</Button>
-        <Button>Tableau Resume</Button>
+        <animated.button style={buttonAnimation} link="/About">
+          More About Me 🤔
+        </animated.button>
+        <animated.button style={buttonAnimation} link="/education">
+          Education 🤯
+        </animated.button>
+        <animated.button style={buttonAnimation} link="/work-experience">
+          Work Experience 😳
+        </animated.button>
+        <animated.button style={buttonAnimation} link="/resume">
+          Tableau Resume
+        </animated.button>
       </ButtonContainer>
     </HomeContainer>
   );

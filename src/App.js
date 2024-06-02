@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/NavBar";
 import Home from "./components/Home";
@@ -18,8 +19,6 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/typewriter" element={<Typewriter />} />
-          <Route path="/tile" element={<Tile />} />
         </Routes>
       </div>
     </Router>

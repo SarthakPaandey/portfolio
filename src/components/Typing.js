@@ -51,7 +51,9 @@ function Typing({
         fontSize: "32px",
         color: "#5e3c96",
         fontWeight: "bold",
-        fontFamily: "monospace",
+        fontFamily: "Arial, sans-serif",
+        textAlign: "center",
+        margin: "20px 0",
       }}
     >
       {displayedText}
