@@ -74,10 +74,10 @@ const About = () => {
           <strong>Education:</strong> Bachelor of Science in Computer Science
         </Typewriter>
       </p>
-      <image
-        src="https://img.freepik.com/free-photo/glowing-spaceship-orbits-planet-starry-galaxy-generated-by-ai_188544-9655.jpg?t=st=1717324041~exp=1717327641~hmac=0a72e15677c97e8f0727700b9a21cd4886051b772619c54b8c5116f23bfeb934&w=2000"
+      {/* <image
+        src="https://images.pexels.com/photos/957040/night-photograph-starry-sky-night-sky-star-957040.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
         alt="profile"
-      />
+      /> */}
     </section>
   );
 };

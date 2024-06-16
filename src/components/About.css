@@ -31,10 +31,16 @@ p {
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 1rem;
-  color: #e6e5e8;
+  color: gold;
+  transition: font-size 0.3s ease; /* Add transition for font-size */
 }
+
+p:hover {
+  font-size: 1.3rem; /* Increase font-size on hover */
+}
+
 h1 {
-  color: #5e3c96;
+  color: rgb(9, 45, 227);
   font-size: 2.5rem;
   margin-bottom: 1rem;
   font-family: "Georgia", serif;
@@ -115,5 +121,23 @@ button:hover {
 
   button {
     font-size: 0.8rem;
+  }
+}
+/* Add this to your CSS file */
+h1 {
+  /* ... other styles ... */
+  display: inline-block; /* Make the paragraph an inline-block element */
+  animation: wordGrow 2s linear infinite; /* Add animation */
+}
+
+@keyframes wordGrow {
+  0% {
+    font-size: 3.1rem;
+  }
+  50% {
+    font-size: 2.3rem;
+  }
+  100% {
+    font-size: 3.1rem;
   }
 }

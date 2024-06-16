@@ -13,7 +13,7 @@ const HomeContainer = styled.div`
   flex-direction: column; /* Arrange items in a row */
   align-items: center; /* Vertically align items */
   justify-content: space-around;
-  background: url(https://img.freepik.com/free-photo/space-travel-collage-design_23-2150163773.jpg?t=st=1717343884~exp=1717347484~hmac=654c66ef6878cc3feb7b595941842d3c554d5ea5de4c15b4bc1dc9ae3771900f&w=2000);
+  background: url("https://images.pexels.com/photos/2156/sky-earth-space-working.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -120,11 +120,7 @@ const Home = () => {
       <animated.h1 style={headerAnimation}>Sarthak Pandey</animated.h1>
 
       <Typewriter
-        text={[
-          "Hello there! 👋",
-          "😊 Welcome to my website!",
-          "I am a developer😄  and a designer🤔.",
-        ]}
+        text={["Hello there! 👋", "😊 Welcome to my website!"]}
         typeSpeed={100}
         deleteSpeed={50}
         duration={1000}
