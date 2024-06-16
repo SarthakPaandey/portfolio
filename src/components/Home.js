@@ -21,7 +21,7 @@ const HomeContainer = styled.div`
 
 const Header = styled.h1`
   font-size: 3rem;
-  color: #5e3c96;
+  color: white;
   margin-top: 2rem;
   margin-bottom: 1rem;
 `;
@@ -33,7 +33,7 @@ const SubHeader = styled.h2`
 `;
 
 const ButtonContainer = styled.div`
-  margin-top: 2rem;https://img.freepik.com/free-photo/space-travel-collage-design_23-2150163773.jpg?t=st=1717343884~exp=1717347484~hmac=654c66ef6878cc3feb7b595941842d3c554d5ea5de4c15b4bc1dc9ae3771900f&w=2000
+  margin-top: 2rem;
   display: flex; /* Add flexbox display */
   flex-direction: column; /* Arrange items in a column */
   /* Center items horizontally */
