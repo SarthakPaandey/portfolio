@@ -19,7 +19,7 @@ const NavBar = () => {
           <Link to="/contact">Contact</Link>
         </li>
         <li className="Navitem">
-          <Link to="/resume">Resume</Link>
+          <Link to="/">Resume</Link>
         </li>
       </ul>
     </nav>

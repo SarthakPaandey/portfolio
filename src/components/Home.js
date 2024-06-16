@@ -28,7 +28,7 @@ const Header = styled.h1`
 
 const SubHeader = styled.h2`
   font-size: 2rem;
-  color: #6d6d6d;
+  color: white;
   margin-top: 1rem;
 `;
 
@@ -49,38 +49,32 @@ const Button = styled.button`
   border-radius: 5px;
   font-size: 1rem;
   cursor: pointer;
-  color: #fff;
-  background-color: #5e3c96;
+  color: white;
+  background-color: red; /* Changed default background color */
   transition: background-color 0.3s;
 
   &:hover {
-    background-color: #472b72;
+    background-color: #0056b3; /* Changed hover color */
   }
 
   &:nth-child(2) {
-    background-color: #7e57c2;
+    background-color: #28a745; /* Changed second button color */
     &:hover {
-      background-color: #5e3c96;
+      background-color: #218838; /* Changed hover color for second button */
     }
   }
 
   &:nth-child(3) {
-    background-color: #9575cd;
+    background-color: #dc3545; /* Changed third button color */
     &:hover {
-      background-color: #7e57c2;
+      background-color: red; /* Changed hover color for third button */
     }
   }
-  /* ButtonContainer.css */
-
   .ButtonContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
-  }
-
-  .Button {
-    /* ... other styles ... */
   }
 
   .Button img {
@@ -90,9 +84,9 @@ const Button = styled.button`
   }
 
   &:nth-child(4) {
-    background-color: #b39ddb;
+    background-color: #ffc107; /* Changed fourth button color */
     &:hover {
-      background-color: #9575cd;
+      background-color: #e0a800; /* Changed hover color for fourth button */
     }
   }
 `;
@@ -117,7 +111,9 @@ const Home = () => {
 
   return (
     <HomeContainer>
-      <animated.h1 style={headerAnimation}>Sarthak Pandey</animated.h1>
+      <animated.h1 style={headerAnimation} className="cool-text">
+        Sarthak Pandey
+      </animated.h1>
 
       <Typewriter
         text={["Hello there! 👋", "😊 Welcome to my website!"]}
@@ -126,22 +122,22 @@ const Home = () => {
         duration={1000}
       />
 
-      <animated.h2 style={subHeaderAnimation}>
+      <animated.h2 style={subHeaderAnimation} className="cool-text">
         Full Stack Developer & Designer
       </animated.h2>
 
       <ButtonContainer>
-        <animated.button style={buttonAnimation} link="/About">
-          More About Me 🤔
+        <animated.button style={buttonAnimation}>
+          <Link to="/about">More About Me 🤔</Link>
         </animated.button>
-        <animated.button style={buttonAnimation} link="/education">
-          Education 🤯
+        <animated.button style={buttonAnimation}>
+          <Link to="/education">Education 🤯</Link>
         </animated.button>
-        <animated.button style={buttonAnimation} link="/work-experience">
-          Work Experience 😳
+        <animated.button style={buttonAnimation}>
+          <Link to="/work-experience">Work Experience 😳</Link>
         </animated.button>
-        <animated.button style={buttonAnimation} link="/resume">
-          Tableau Resume
+        <animated.button style={buttonAnimation}>
+          <Link to="/resume">Tableau Resume</Link>
         </animated.button>
       </ButtonContainer>
     </HomeContainer>
